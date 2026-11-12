@@ -1,513 +1,942 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="#071832" name="theme-color"/>
-  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
-  <title>
-   Business workspace | STACKLY
-  </title>
-  <!-- CSS FILES -->
-  <link href="css/common.css" rel="stylesheet"/>
-  <link href="css/site.css" rel="stylesheet"/>
- </head>
- <body>
-  <!-- =========================================
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071832">
+    <meta name="description" content="STACKLY business workspace for projects, people and performance">
+
+    <title>Business workspace | STACKLY</title>
+
+    <!-- CSS FILES -->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- =========================================
          1. COMMON 3D LAPTOP PRELOADER
     ========================================== -->
-  <div aria-label="Loading STACKLY" id="preloader">
-   <div class="loader-wrap">
-    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
-    <div class="laptop-scene">
-     <div class="laptop">
-      <div class="screen">
-       <div class="screen-top">
-        <i>
-        </i>
-        <i>
-        </i>
-        <i>
-        </i>
-       </div>
-       <div class="dash">
-        <div>
-         <div class="dash-kpis">
-          <b>
-          </b>
-          <b>
-          </b>
-          <b>
-          </b>
-         </div>
-         <div class="dash-chart">
-          <i>
-          </i>
-          <i>
-          </i>
-          <i>
-          </i>
-          <i>
-          </i>
-          <i>
-          </i>
-         </div>
+
+    <div id="preloader" aria-label="Loading STACKLY">
+
+        <div class="loader-wrap">
+
+            <img
+                src="assets/stackly-logo.webp"
+                alt="STACKLY"
+                class="loader-brand"
+            >
+
+            <div class="laptop-scene">
+
+                <div class="laptop">
+
+                    <div class="screen">
+
+                        <div class="screen-top">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                        </div>
+
+                        <div class="dash">
+
+                            <div>
+
+                                <div class="dash-kpis">
+                                    <b></b>
+                                    <b></b>
+                                    <b></b>
+                                </div>
+
+                                <div class="dash-chart">
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                    <i></i>
+                                </div>
+
+                            </div>
+
+                            <div class="dash-side"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="base"></div>
+
+                </div>
+
+            </div>
+
+            <div class="loader-caption">
+                WORKSPACE IS GETTING READY
+            </div>
+
+            <div class="loader-progress">
+                <span id="loaderBar"></span>
+            </div>
+
+            <div class="loader-percent" id="loaderPercent">
+                0%
+            </div>
+
+            <div class="loader-note">
+                Projects &middot; People &middot; Performance
+            </div>
+
         </div>
-        <div class="dash-side">
-        </div>
-       </div>
-      </div>
-      <div class="base">
-      </div>
-     </div>
+
     </div>
-    <div class="loader-caption">
-     WORKSPACE IS GETTING READY
-    </div>
-    <div class="loader-progress">
-     <span id="loaderBar">
-     </span>
-    </div>
-    <div class="loader-percent" id="loaderPercent">
-     0%
-    </div>
-    <div class="loader-note">
-     Projects &middot; People &middot; Performance
-    </div>
-   </div>
-  </div>
-  <!-- =========================================
+
+
+    <!-- =========================================
          2. HEADER / NAVIGATION
     ========================================== -->
-  <header class="site-header">
-   <div class="container header-inner">
-    <!-- STACKLY LOGO -->
-    <a class="brand" href="index.html">
-     <img alt="STACKLY" src="assets/stackly-logo.webp"/>
-    </a>
-    <!-- MAIN NAVIGATION -->
-    <nav class="main-nav" id="mainNav">
-     <a data-i18n="Home" href="index.html">
-      Home
-     </a>
-     <a data-i18n="Solutions" href="#solutions">
-      Solutions
-     </a>
-     <a data-i18n="Features" href="#features">
-      Features
-     </a>
-     <a data-i18n="About Us" href="#about">
-      About Us
-     </a>
-     <a data-i18n="Contact" href="contact.html">
-      Contact
-     </a>
-    </nav>
-    <!-- HEADER ACTIONS -->
-    <div class="header-actions">
-     <!-- LANGUAGE SELECTOR -->
-     <select aria-label="Choose language" class="lang-select" id="languageSelect">
-      <option value="en">
-       🌐 EN
-      </option>
-      <option value="ta">
-       🌐 தமிழ்
-      </option>
-      <option value="hi">
-       🌐 हिन्दी
-      </option>
-     </select>
-     <!-- LOGIN -->
-     <a class="btn btn-light" data-i18n="Sign in" href="login.html">
-      Sign in
-     </a>
-     <!-- REGISTER -->
-     <a class="btn btn-primary" data-i18n="Register" href="signup.html">
-      Register
-     </a>
-    </div>
-    <!-- MOBILE MENU BUTTON -->
-    <button aria-expanded="false" aria-label="Open menu" class="menu-toggle" id="menuToggle">
-     ☰
-    </button>
-   </div>
-  </header>
-  <!-- =========================================
+
+    <header class="site-header">
+
+        <div class="container header-inner">
+
+            <!-- STACKLY LOGO -->
+
+            <a class="brand" href="index.html">
+
+                <img
+                    src="assets/stackly-logo.webp"
+                    alt="STACKLY"
+                >
+
+            </a>
+
+
+            <!-- MAIN NAVIGATION -->
+
+            <nav class="main-nav" id="mainNav">
+
+                <a data-i18n="Home" href="index.html">
+                    Home
+                </a>
+
+                <a data-i18n="Solutions" href="#solutions">
+                    Solutions
+                </a>
+
+                <a data-i18n="Features" href="#features">
+                    Features
+                </a>
+
+                <a data-i18n="About Us" href="#about">
+                    About Us
+                </a>
+
+                <a data-i18n="Contact" href="contact.html">
+                    Contact
+                </a>
+
+
+                <!-- MOBILE SIGN IN BUTTON -->
+
+                <a
+                    class="mobile-auth-link mobile-signin"
+                    data-i18n="Sign in"
+                    href="login.html"
+                >
+                    Sign in
+                </a>
+
+
+                <!-- MOBILE REGISTER BUTTON -->
+
+                <a
+                    class="mobile-auth-link mobile-register"
+                    data-i18n="Register"
+                    href="signup.html"
+                >
+                    Register
+                </a>
+
+            </nav>
+
+
+            <!-- DESKTOP HEADER ACTIONS -->
+
+            <div class="header-actions">
+
+                <!-- LANGUAGE SELECTOR -->
+
+                <select
+                    id="languageSelect"
+                    class="lang-select"
+                    aria-label="Choose language"
+                >
+
+                    <option value="en">
+                        🌐 EN
+                    </option>
+
+                    <option value="ta">
+                        🌐 தமிழ்
+                    </option>
+
+                    <option value="hi">
+                        🌐 हिन्दी
+                    </option>
+
+                </select>
+
+
+                <!-- DESKTOP LOGIN -->
+
+                <a
+                    class="btn btn-light"
+                    data-i18n="Sign in"
+                    href="login.html"
+                >
+                    Sign in
+                </a>
+
+
+                <!-- DESKTOP REGISTER -->
+
+                <a
+                    class="btn btn-primary"
+                    data-i18n="Register"
+                    href="signup.html"
+                >
+                    Register
+                </a>
+
+            </div>
+
+
+            <!-- MOBILE MENU BUTTON -->
+
+            <button
+                id="menuToggle"
+                class="menu-toggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================
          3. MAIN CONTENT
     ========================================== -->
-  <main>
-   <!-- =====================================
+
+    <main>
+
+
+        <!-- =====================================
              3.1 HERO SECTION
         ====================================== -->
-   <section class="hero">
-    <!-- HERO BACKGROUND IMAGE SLIDESHOW -->
-    <div aria-hidden="true" class="hero-bg-slides">
-     <img alt="" class="hero-bg-slide active" src="assets/corporate images/hero image 01.webp"/>
-     <img alt="" class="hero-bg-slide" src="assets/corporate images/hero image 02.webp"/>
-     <img alt="" class="hero-bg-slide" src="assets/corporate images/hero image 03.webp"/>
-    </div>
-    <!-- HERO CONTENT -->
-    <div class="container hero-grid">
-     <div>
-      <span class="eyebrow" data-i18n="Business, simplified">
-       Business, simplified
-      </span>
-      <h1 data-i18n="Manage Your Business Smarter. Grow Faster.">
-       Manage Your Business
-       <span>
-        Smarter.
-       </span>
-       <br/>
-       Grow Faster.
-      </h1>
-      <p class="hero-copy" data-i18n="Bring projects, people, and performance together in one clear workspace.">
-       Bring projects, people, and performance together
+
+        <section class="hero">
+
+            <!-- HERO BACKGROUND IMAGE SLIDESHOW -->
+
+            <div class="hero-bg-slides" aria-hidden="true">
+
+                <img
+                    class="hero-bg-slide active"
+                    src="assets/corporate images/hero image 01.webp"
+                    alt=""
+                >
+
+                <img
+                    class="hero-bg-slide"
+                    src="assets/corporate images/hero image 02.webp"
+                    alt=""
+                >
+
+                <img
+                    class="hero-bg-slide"
+                    src="assets/corporate images/hero image 03.webp"
+                    alt=""
+                >
+
+            </div>
+
+
+            <!-- HERO CONTENT -->
+
+            <div class="container hero-grid">
+
+                <div>
+
+                    <span
+                        class="eyebrow"
+                        data-i18n="Business, simplified"
+                    >
+                        Business, simplified
+                    </span>
+
+                    <h1 data-i18n="Manage Your Business Smarter. Grow Faster.">
+
+                        Manage Your Business
+
+                        <span>
+                            Smarter.
+                        </span>
+
+                        <br>
+
+                        Grow Faster.
+
+                    </h1>
+
+                    <p
+                        class="hero-copy"
+                        data-i18n="Bring projects, people, and performance together in one clear workspace."
+                    >
+                        Bring projects, people, and performance together
                         in one clear workspace.
-      </p>
-      <!-- HERO BUTTONS -->
-      <div class="hero-buttons">
-       <a class="btn btn-primary" data-i18n="Get Started" href="signup.html">
-        Get Started &nearrow;
-       </a>
-       <a class="btn btn-light" data-i18n="Explore Dashboard" href="overview.html">
-        Explore Dashboard
-       </a>
-      </div>
-      <div class="hero-note">
-       ✦ One workspace. A clearer view of your business.
-      </div>
-     </div>
-    </div>
-   </section>
-   <!-- =====================================
+                    </p>
+
+
+                    <!-- HERO BUTTONS -->
+
+                    <div class="hero-buttons">
+
+                        <a
+                            class="btn btn-primary"
+                            data-i18n="Get Started"
+                            href="signup.html"
+                        >
+                            Get Started &nearrow;
+                        </a>
+
+                        <a
+                            class="btn btn-light"
+                            data-i18n="Explore Dashboard"
+                            href="overview.html"
+                        >
+                            Explore Dashboard
+                        </a>
+
+                    </div>
+
+                    <div class="hero-note">
+                        ✦ One workspace. A clearer view of your business.
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
              3.2 SOLUTIONS SECTION
         ====================================== -->
-   <section class="section" id="solutions">
-    <div class="container">
-     <span class="eyebrow">
-      A better way to work
-     </span>
-     <h2 class="section-title" data-i18n="A simpler way to run your business">
-      A simpler way to run your business
-     </h2>
-     <p class="section-sub">
-      Keep everyday work connected and easy to manage.
+
+        <section class="section" id="solutions">
+
+            <div class="container">
+
+                <span class="eyebrow">
+                    A better way to work
+                </span>
+
+                <h2
+                    class="section-title"
+                    data-i18n="A simpler way to run your business"
+                >
+                    A simpler way to run your business
+                </h2>
+
+                <p class="section-sub">
+                    Keep everyday work connected and easy to manage.
                     Bring every moving part of your business into one
                     calm, clear space.
-     </p>
-     <!-- SOLUTION CARDS -->
-     <div class="feature-grid">
-      <!-- CARD 1: BUSINESS MANAGEMENT -->
-      <article class="card feature-card">
-       <img alt="Business team workspace" class="marketing-card-image" src="assets/corporate images/business management 01.webp"/>
-       <img alt="Alternate view" aria-hidden="true" class="marketing-card-image image-hover-alt" src="assets/corporate images/business management 02.webp"/>
-       <div class="icon">
-        ▦
-       </div>
-       <h3>
-        Business Management
-       </h3>
-       <p>
-        Organize projects, tasks, and teams in one place.
+                </p>
+
+
+                <!-- SOLUTION CARDS -->
+
+                <div class="feature-grid">
+
+
+                    <!-- CARD 1: BUSINESS MANAGEMENT -->
+
+                    <article class="card feature-card">
+
+                        <img
+                            src="assets/corporate images/business management 01.webp"
+                            alt="Business team workspace"
+                            class="marketing-card-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/business management 02.webp"
+                            alt="Alternate view"
+                            aria-hidden="true"
+                            class="marketing-card-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            ▦
+                        </div>
+
+                        <h3>
+                            Business Management
+                        </h3>
+
+                        <p>
+                            Organize projects, tasks, and teams in one place.
                             Keep priorities visible and work moving forward.
-       </p>
-      </article>
-      <!-- CARD 2: PERFORMANCE TRACKING -->
-      <article class="card feature-card">
-       <img alt="Business analytics dashboard" class="marketing-card-image" src="assets/corporate images/performance tracking 01.webp"/>
-       <img alt="Alternate view" aria-hidden="true" class="marketing-card-image image-hover-alt" src="assets/corporate images/performance tracking 02.webp"/>
-       <div class="icon">
-        ⌁
-       </div>
-       <h3>
-        Performance Tracking
-       </h3>
-       <p>
-        See progress and understand what needs attention
+                        </p>
+
+                    </article>
+
+
+                    <!-- CARD 2: PERFORMANCE TRACKING -->
+
+                    <article class="card feature-card">
+
+                        <img
+                            src="assets/corporate images/performance tracking 01.webp"
+                            alt="Business analytics dashboard"
+                            class="marketing-card-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/performance tracking 02.webp"
+                            alt="Alternate view"
+                            aria-hidden="true"
+                            class="marketing-card-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            ⌁
+                        </div>
+
+                        <h3>
+                            Performance Tracking
+                        </h3>
+
+                        <p>
+                            See progress and understand what needs attention
                             with simple, useful performance insights.
-       </p>
-      </article>
-      <!-- CARD 3: WORKFLOW MANAGEMENT -->
-      <article class="card feature-card">
-       <img alt="Team collaboration" class="marketing-card-image" src="assets/corporate images/workflow management 01.webp"/>
-       <img alt="Alternate view" aria-hidden="true" class="marketing-card-image image-hover-alt" src="assets/corporate images/workflow management 02.webp"/>
-       <div class="icon">
-        ♧
-       </div>
-       <h3>
-        Workflow Management
-       </h3>
-       <p>
-        Keep work moving with clear owners, shared context,
+                        </p>
+
+                    </article>
+
+
+                    <!-- CARD 3: WORKFLOW MANAGEMENT -->
+
+                    <article class="card feature-card">
+
+                        <img
+                            src="assets/corporate images/workflow management 01.webp"
+                            alt="Team collaboration"
+                            class="marketing-card-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/workflow management 02.webp"
+                            alt="Alternate view"
+                            aria-hidden="true"
+                            class="marketing-card-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            ♧
+                        </div>
+
+                        <h3>
+                            Workflow Management
+                        </h3>
+
+                        <p>
+                            Keep work moving with clear owners, shared context,
                             and realistic deadlines.
-       </p>
-      </article>
-     </div>
-    </div>
-   </section>
-   <!-- =====================================
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
              3.3 FEATURES SECTION
         ====================================== -->
-   <section class="section control-section" id="features">
-    <div class="container">
-     <span class="eyebrow">
-      Everything in sync
-     </span>
-     <h2 class="section-title" data-i18n="Everything you need to stay in control">
-      Everything you need to stay in control
-     </h2>
-     <p class="section-sub">
-      The tools you need to make confident decisions
+
+        <section
+            class="section control-section"
+            id="features"
+        >
+
+            <div class="container">
+
+                <span class="eyebrow">
+                    Everything in sync
+                </span>
+
+                <h2
+                    class="section-title"
+                    data-i18n="Everything you need to stay in control"
+                >
+                    Everything you need to stay in control
+                </h2>
+
+                <p class="section-sub">
+                    The tools you need to make confident decisions
                     without adding complexity.
-     </p>
-     <!-- FEATURE CARDS -->
-     <div class="control-grid">
-      <!-- CARD 1: BUSINESS ANALYTICS -->
-      <div class="control-card">
-       <img alt="Analytics" class="control-image" src="assets/corporate images/business analytics 01.webp"/>
-       <img alt="Alternate feature view" aria-hidden="true" class="control-image image-hover-alt" src="assets/corporate images/business analytics 02.webp"/>
-       <div class="icon">
-        ▥
-       </div>
-       <h4>
-        Business Analytics
-       </h4>
-       <p>
-        Turn business data into a clear picture.
-       </p>
-      </div>
-      <!-- CARD 2: TASK MANAGEMENT -->
-      <div class="control-card">
-       <img alt="Task planning" class="control-image" src="assets/corporate images/task management 01.webp"/>
-       <img alt="Alternate feature view" aria-hidden="true" class="control-image image-hover-alt" src="assets/corporate images/task management 02.webp"/>
-       <div class="icon">
-        &checkmark;
-       </div>
-       <h4>
-        Task Management
-       </h4>
-       <p>
-        Prioritize work and track every deadline.
-       </p>
-      </div>
-      <!-- CARD 3: TEAM COLLABORATION -->
-      <div class="control-card">
-       <img alt="Team collaboration" class="control-image" src="assets/corporate images/team collaburation 01.webp"/>
-       <img alt="Alternate feature view" aria-hidden="true" class="control-image image-hover-alt" src="assets/corporate images/team collapuration 02.webp"/>
-       <div class="icon">
-        ♧
-       </div>
-       <h4>
-        Team Collaboration
-       </h4>
-       <p>
-        Give everyone a shared view of progress.
-       </p>
-      </div>
-      <!-- CARD 4: REAL-TIME REPORTS -->
-      <div class="control-card">
-       <img alt="Business meeting" class="control-image" src="assets/corporate images/real time reports 01.webp"/>
-       <img alt="Alternate feature view" aria-hidden="true" class="control-image image-hover-alt" src="assets/corporate images/real time reports 02.webp"/>
-       <div class="icon">
-        ◷
-       </div>
-       <h4>
-        Real-Time Reports
-       </h4>
-       <p>
-        Review the latest updates in one place.
-       </p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <!-- =====================================
+                </p>
+
+
+                <!-- FEATURE CARDS -->
+
+                <div class="control-grid">
+
+
+                    <!-- CARD 1: BUSINESS ANALYTICS -->
+
+                    <div class="control-card">
+
+                        <img
+                            src="assets/corporate images/business analytics 01.webp"
+                            alt="Analytics"
+                            class="control-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/business analytics 02.webp"
+                            alt="Alternate feature view"
+                            aria-hidden="true"
+                            class="control-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            ▥
+                        </div>
+
+                        <h4>
+                            Business Analytics
+                        </h4>
+
+                        <p>
+                            Turn business data into a clear picture.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CARD 2: TASK MANAGEMENT -->
+
+                    <div class="control-card">
+
+                        <img
+                            src="assets/corporate images/task management 01.webp"
+                            alt="Task planning"
+                            class="control-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/task management 02.webp"
+                            alt="Alternate feature view"
+                            aria-hidden="true"
+                            class="control-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            &checkmark;
+                        </div>
+
+                        <h4>
+                            Task Management
+                        </h4>
+
+                        <p>
+                            Prioritize work and track every deadline.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CARD 3: TEAM COLLABORATION -->
+
+                    <div class="control-card">
+
+                        <img
+                            src="assets/corporate images/team collaburation 01.webp"
+                            alt="Team collaboration"
+                            class="control-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/team collapuration 02.webp"
+                            alt="Alternate feature view"
+                            aria-hidden="true"
+                            class="control-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            ♧
+                        </div>
+
+                        <h4>
+                            Team Collaboration
+                        </h4>
+
+                        <p>
+                            Give everyone a shared view of progress.
+                        </p>
+
+                    </div>
+
+
+                    <!-- CARD 4: REAL-TIME REPORTS -->
+
+                    <div class="control-card">
+
+                        <img
+                            src="assets/corporate images/real time reports 01.webp"
+                            alt="Business meeting"
+                            class="control-image"
+                        >
+
+                        <img
+                            src="assets/corporate images/real time reports 02.webp"
+                            alt="Alternate feature view"
+                            aria-hidden="true"
+                            class="control-image image-hover-alt"
+                        >
+
+                        <div class="icon">
+                            ◷
+                        </div>
+
+                        <h4>
+                            Real-Time Reports
+                        </h4>
+
+                        <p>
+                            Review the latest updates in one place.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
              3.4 THREE SIMPLE STEPS SECTION
         ====================================== -->
-   <section class="section">
-    <div class="container">
-     <span class="eyebrow">
-      Simple by design
-     </span>
-     <h2 class="section-title" data-i18n="Get started in three simple steps">
-      Get started in three simple steps
-     </h2>
-     <div class="steps">
-      <!-- STEP 1 -->
-      <div class="step">
-       <b>
-        01
-       </b>
-       <h3>
-        Create Your Account
-       </h3>
-       <p>
-        Set up your business workspace and invite your team.
-       </p>
-      </div>
-      <!-- STEP 2 -->
-      <div class="step">
-       <b>
-        02
-       </b>
-       <h3>
-        Manage Your Business
-       </h3>
-       <p>
-        Add projects and bring your team together.
-       </p>
-      </div>
-      <!-- STEP 3 -->
-      <div class="step">
-       <b>
-        03
-       </b>
-       <h3>
-        Track Your Performance
-       </h3>
-       <p>
-        Review progress and plan your next steps.
-       </p>
-      </div>
-     </div>
-    </div>
-   </section>
-   <!-- =====================================
+
+        <section class="section">
+
+            <div class="container">
+
+                <span class="eyebrow">
+                    Simple by design
+                </span>
+
+                <h2
+                    class="section-title"
+                    data-i18n="Get started in three simple steps"
+                >
+                    Get started in three simple steps
+                </h2>
+
+                <div class="steps">
+
+
+                    <!-- STEP 1 -->
+
+                    <div class="step">
+
+                        <b>01</b>
+
+                        <h3>
+                            Create Your Account
+                        </h3>
+
+                        <p>
+                            Set up your business workspace and invite your team.
+                        </p>
+
+                    </div>
+
+
+                    <!-- STEP 2 -->
+
+                    <div class="step">
+
+                        <b>02</b>
+
+                        <h3>
+                            Manage Your Business
+                        </h3>
+
+                        <p>
+                            Add projects and bring your team together.
+                        </p>
+
+                    </div>
+
+
+                    <!-- STEP 3 -->
+
+                    <div class="step">
+
+                        <b>03</b>
+
+                        <h3>
+                            Track Your Performance
+                        </h3>
+
+                        <p>
+                            Review progress and plan your next steps.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
              3.5 ABOUT US SECTION
         ====================================== -->
-   <section class="section" id="about">
-    <div class="container about-strip">
-     <!-- ABOUT IMAGE -->
-     <!-- ABOUT HEADING -->
-     <h2 data-i18n="Built for the way your business works.">
-      Built for the way
-      <br/>
-      your business works.
-     </h2>
-     <!-- ABOUT CONTENT -->
-     <div>
-      <span class="eyebrow">
-       About STACKLY
-      </span>
-      <p class="section-sub">
-       STACKLY brings everyday business operations into
+
+        <section class="section" id="about">
+
+            <div class="container about-strip">
+
+                <!-- ABOUT IMAGE -->
+
+                <!-- ABOUT HEADING -->
+
+                <h2 data-i18n="Built for the way your business works.">
+                    Built for the way
+                    <br>
+                    your business works.
+                </h2>
+
+
+                <!-- ABOUT CONTENT -->
+
+                <div>
+
+                    <span class="eyebrow">
+                        About STACKLY
+                    </span>
+
+                    <p class="section-sub">
+                        STACKLY brings everyday business operations into
                         one straightforward workspace. We help teams stay
                         organized, work together, and make informed decisions.
                         Less busywork means more room for meaningful progress.
-      </p>
-     </div>
-    </div>
-   </section>
-   <!-- =====================================
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================
              3.6 CALL TO ACTION SECTION
         ====================================== -->
-   <section class="cta cta-image">
-    <div class="cta-overlay">
-    </div>
-    <div class="cta-content">
-     <h2 data-i18n="Ready to Take Control of Your Business?">
-      Ready to Take Control of Your Business?
-     </h2>
-     <p>
-      Create your workspace and start with a clearer plan.
-     </p>
-     <a class="btn btn-primary" data-i18n="Get Started" href="signup.html">
-      Get Started &nearrow;
-     </a>
-    </div>
-   </section>
-  </main>
-  <!-- =========================================
+
+        <section class="cta cta-image">
+
+            <div class="cta-overlay"></div>
+
+            <div class="cta-content">
+
+                <h2 data-i18n="Ready to Take Control of Your Business?">
+                    Ready to Take Control of Your Business?
+                </h2>
+
+                <p>
+                    Create your workspace and start with a clearer plan.
+                </p>
+
+                <a
+                    class="btn btn-primary"
+                    data-i18n="Get Started"
+                    href="signup.html"
+                >
+                    Get Started &nearrow;
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================================
          4. FOOTER
     ========================================== -->
-  <footer class="site-footer" id="contact">
-   <div class="container">
-    <div class="footer-grid">
-     <!-- FOOTER BRAND -->
-     <div class="footer-col">
-      <img alt="STACKLY" class="footer-logo" src="assets/stackly-logo.webp"/>
-      <p>
-       A clearer way to manage your business.
+
+    <footer class="site-footer" id="contact">
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+
+                <!-- FOOTER BRAND -->
+
+                <div class="footer-col">
+
+                    <img
+                        src="assets/stackly-logo.webp"
+                        alt="STACKLY"
+                        class="footer-logo"
+                    >
+
+                    <p>
+                        A clearer way to manage your business.
                         Plan with confidence, work together,
                         and grow with purpose.
-      </p>
-     </div>
-     <!-- QUICK LINKS -->
-     <div class="footer-col">
-      <h4>
-       Quick links
-      </h4>
-      <a href="index.html">
-       Home
-      </a>
-      <a href="#solutions">
-       Solutions
-      </a>
-      <a href="#features">
-       Features
-      </a>
-      <a href="contact.html">
-       Contact
-      </a>
-      <a href="login.html">
-       Sign in
-      </a>
-     </div>
-     <!-- WORKSPACE LINKS -->
-     <div class="footer-col">
-      <h4>
-       Workspace
-      </h4>
-      <a href="overview.html">
-       Overview
-      </a>
-      <a href="projects.html">
-       Projects
-      </a>
-      <a href="analytics.html">
-       Analytics
-      </a>
-      <a href="reports.html">
-       Reports
-      </a>
-     </div>
-     <!-- CONTACT DETAILS -->
-     <div class="footer-col">
-      <h4>
-       Contact
-      </h4>
-      <p>
-       hello@stackly.example
-      </p>
-      <p>
-       Contact our team
-      </p>
-      <a href="contact.html">
-       Office &amp; Enquiries &rarr;
-      </a>
-      <p>
-       Mon &ndash; Fri &middot; 9:00 AM &ndash; 6:00 PM
-      </p>
-     </div>
-    </div>
-    <!-- FOOTER BOTTOM -->
-    <div class="footer-bottom">
-     <span>
-      &copy; 2026 STACKLY. All rights reserved.
-     </span>
-     <span>
-      Privacy Policy　&middot;　Terms of Service
-     </span>
-    </div>
-   </div>
-  </footer>
-  <!-- =========================================
+                    </p>
+
+                </div>
+
+
+                <!-- QUICK LINKS -->
+
+                <div class="footer-col">
+
+                    <h4>
+                        Quick links
+                    </h4>
+
+                    <a href="index.html">
+                        Home
+                    </a>
+
+                    <a href="#solutions">
+                        Solutions
+                    </a>
+
+                    <a href="#features">
+                        Features
+                    </a>
+
+                    <a href="contact.html">
+                        Contact
+                    </a>
+
+                    <a href="login.html">
+                        Sign in
+                    </a>
+
+                </div>
+
+
+                <!-- WORKSPACE LINKS -->
+
+                <div class="footer-col">
+
+                    <h4>
+                        Workspace
+                    </h4>
+
+                    <a href="overview.html">
+                        Overview
+                    </a>
+
+                    <a href="projects.html">
+                        Projects
+                    </a>
+
+                    <a href="analytics.html">
+                        Analytics
+                    </a>
+
+                    <a href="reports.html">
+                        Reports
+                    </a>
+
+                </div>
+
+
+                <!-- CONTACT DETAILS -->
+
+                <div class="footer-col">
+
+                    <h4>
+                        Contact
+                    </h4>
+
+                    <p>
+                        hello@stackly.example
+                    </p>
+
+                    <p>
+                        Contact our team
+                    </p>
+
+                    <a href="contact.html">
+                        Office &amp; Enquiries &rarr;
+                    </a>
+
+                    <p>
+                        Mon &ndash; Fri &middot; 9:00 AM &ndash; 6:00 PM
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- FOOTER BOTTOM -->
+
+            <div class="footer-bottom">
+
+                <span>
+                    &copy; 2026 STACKLY. All rights reserved.
+                </span>
+
+                <span>
+                    Privacy Policy　&middot;　Terms of Service
+                </span>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================
          5. JAVASCRIPT FILES
     ========================================== -->
-  <script defer="" src="js/common.js">
-  </script>
-  <script defer="" src="js/landing.js">
-  </script>
- </body>
-</html>
 
+    <script src="js/common.js" defer></script>
+    <script src="js/landing.js" defer></script>
+
+</body>
+
+</html>
