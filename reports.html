@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Reports | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay">
+  </div>
+  <div class="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+     <a href="index.html">
+      <img alt="STACKLY logo" src="assets/stackly-logo.webp"/>
+     </a>
+     <div class="side-quote">
+      Plan Smart. Work Better.
+      <br/>
+      Grow Together.
+     </div>
+    </div>
+    <div class="side-label">
+     WORKSPACE
+    </div>
+    <nav class="side-nav">
+     <a class="" href="overview.html">
+      <span>
+       ▣
+      </span>
+      <span data-i18n="Overview">
+       Overview
+      </span>
+     </a>
+     <a class="" href="analytics.html">
+      <span>
+       ⌁
+      </span>
+      <span data-i18n="Analytics">
+       Analytics
+      </span>
+     </a>
+     <a class="" href="projects.html">
+      <span>
+       ▦
+      </span>
+      <span data-i18n="Projects">
+       Projects
+      </span>
+     </a>
+     <a class="" href="tasks.html">
+      <span>
+       ☑
+      </span>
+      <span data-i18n="Tasks">
+       Tasks
+      </span>
+     </a>
+     <a class="" href="team.html">
+      <span>
+       ♧
+      </span>
+      <span data-i18n="Team Members">
+       Team Members
+      </span>
+     </a>
+     <a class="active" href="reports.html">
+      <span>
+       ▥
+      </span>
+      <span data-i18n="Reports">
+       Reports
+      </span>
+     </a>
+     <a class="" href="settings.html">
+      <span>
+       ⚙
+      </span>
+      <span data-i18n="Settings">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="side-bottom">
+     <strong>
+      STACKLY workspace
+     </strong>
+     <small>
+      12 team members &middot; 3 teams
+     </small>
+     <button class="logout-btn" id="logoutBtn">
+      <span>
+       &rarrb;
+      </span>
+      <span data-i18n="Logout">
+       Logout
+      </span>
+     </button>
+    </div>
+   </aside>
+   <main class="app-main">
+    <header class="app-topbar">
+     <div style="display:flex;align-items:center;gap:12px">
+      <button aria-label="Toggle sidebar" class="mobile-sidebar-toggle" id="sidebarToggle">
+       ☰
+      </button>
+      <div>
+       <h1 class="top-title">
+        Overview
+       </h1>
+       <div class="breadcrumb">
+        Workspace / Reports
+       </div>
+      </div>
+     </div>
+     <div class="top-actions">
+      <div class="user-chip" id="userChip">
+       <span class="user-avatar" id="userInitial">
+        U
+       </span>
+       <span>
+        <small>
+         Signed in as
+        </small>
+        <strong id="userName">
+         Workspace User
+        </strong>
+       </span>
+      </div>
+      <input class="workspace-search" data-i18n-placeholder="Search workspace" placeholder="&telrec;  Search workspace"/>
+      <select aria-label="Language" class="lang-select" id="languageSelect">
+       <option value="en">
+        🌐 EN
+       </option>
+       <option value="ta">
+        🌐 தமிழ்
+       </option>
+       <option value="hi">
+        🌐 हिन्दी
+       </option>
+      </select>
+      <div class="notification-wrap">
+       <button class="notification-btn" id="notificationBtn">
+        ♧
+        <span data-i18n="Notifications">
+         Notifications
+        </span>
+        <b id="notificationCount">
+         3
+        </b>
+       </button>
+       <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+         <strong>
+          Notifications
+         </strong>
+         <button id="markAllRead">
+          Mark all as read
+         </button>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           New project created
+          </strong>
+          <small>
+           Website redesign &middot; 8 min ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Task assigned to you
+          </strong>
+          <small>
+           Prepare launch checklist &middot; 1 hour ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Maya completed a task
+          </strong>
+          <small>
+           Client onboarding &middot; 2 hours ago
+          </small>
+         </div>
+        </div>
+        <div class="notice read">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Weekly report generated
+          </strong>
+          <small>
+           Yesterday
+          </small>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <section class="app-content">
+     <div class="page-heading">
+      <div>
+       <h1 data-i18n="Your business, in a clearer report">
+        Your business, in a clearer report
+       </h1>
+       <p>
+        Review performance, project progress, and team workload.
+       </p>
+      </div>
+      <button class="btn btn-primary" data-add-demo="Create report">
+       ＋ Create Report
+      </button>
+     </div>
+     <div class="toolbar">
+      <select class="form-control" id="reportTypeFilter">
+       <option>
+        All report types
+       </option>
+       <option>
+        Business summary
+       </option>
+       <option>
+        Project progress
+       </option>
+       <option>
+        Task completion
+       </option>
+       <option>
+        Team workload
+       </option>
+      </select>
+      <select class="form-control" id="reportPeriodFilter">
+       <option>
+        November 2026
+       </option>
+       <option>
+        October 2026
+       </option>
+       <option>
+        September 2026
+       </option>
+       <option>
+        December 2026
+       </option>
+      </select>
+      <input class="form-control" data-table-search="#reportsTable" id="reportSearch" placeholder="Search reports..."/>
+     </div>
+     <div class="table-wrap">
+      <table class="data-table" id="reportsTable">
+       <thead>
+        <tr>
+         <th>
+          Report
+         </th>
+         <th>
+          Period
+         </th>
+         <th>
+          Created by
+         </th>
+         <th>
+          Format
+         </th>
+         <th>
+          Action
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <b>
+           Monthly business summary
+          </b>
+         </td>
+         <td>
+          Nov 2026
+         </td>
+         <td>
+          Alex Morgan
+         </td>
+         <td>
+          PDF
+         </td>
+         <td>
+          <a class="report-download" href="#">
+           View / Download &darr;
+          </a>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Project progress report
+          </b>
+         </td>
+         <td>
+          Nov 2026
+         </td>
+         <td>
+          Maya Chen
+         </td>
+         <td>
+          PDF
+         </td>
+         <td>
+          <a class="report-download" href="#">
+           View / Download &darr;
+          </a>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Task completion report
+          </b>
+         </td>
+         <td>
+          Nov 2026
+         </td>
+         <td>
+          Jordan Lee
+         </td>
+         <td>
+          CSV
+         </td>
+         <td>
+          <a class="report-download" href="#">
+           View / Download &darr;
+          </a>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Team workload report
+          </b>
+         </td>
+         <td>
+          Oct 2026
+         </td>
+         <td>
+          Alex Morgan
+         </td>
+         <td>
+          CSV
+         </td>
+         <td>
+          <a class="report-download" href="#">
+           View / Download &darr;
+          </a>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="muted" style="font-size:10px;margin:12px 0 20px">
+      4 recent reports &middot; Example workspace data
+     </p>
+     <article class="card panel">
+      <h3 style="font:800 14px Manrope;margin:0 0 8px">
+       Start with the essentials
+      </h3>
+      <p class="muted" style="font-size:11px;line-height:1.7">
+       Use the monthly summary for a quick overview. Open a focused report when you need more detail.
+      </p>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/page-tools.js">
+  </script>
+  <script defer="" src="js/reports.js">
+  </script>
+ </body>
+</html>
+

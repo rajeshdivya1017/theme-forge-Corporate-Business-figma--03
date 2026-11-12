@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Team Members | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay">
+  </div>
+  <div class="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+     <a href="index.html">
+      <img alt="STACKLY logo" src="assets/stackly-logo.webp"/>
+     </a>
+     <div class="side-quote">
+      Plan Smart. Work Better.
+      <br/>
+      Grow Together.
+     </div>
+    </div>
+    <div class="side-label">
+     WORKSPACE
+    </div>
+    <nav class="side-nav">
+     <a class="" href="overview.html">
+      <span>
+       ▣
+      </span>
+      <span data-i18n="Overview">
+       Overview
+      </span>
+     </a>
+     <a class="" href="analytics.html">
+      <span>
+       ⌁
+      </span>
+      <span data-i18n="Analytics">
+       Analytics
+      </span>
+     </a>
+     <a class="" href="projects.html">
+      <span>
+       ▦
+      </span>
+      <span data-i18n="Projects">
+       Projects
+      </span>
+     </a>
+     <a class="" href="tasks.html">
+      <span>
+       ☑
+      </span>
+      <span data-i18n="Tasks">
+       Tasks
+      </span>
+     </a>
+     <a class="active" href="team.html">
+      <span>
+       ♧
+      </span>
+      <span data-i18n="Team Members">
+       Team Members
+      </span>
+     </a>
+     <a class="" href="reports.html">
+      <span>
+       ▥
+      </span>
+      <span data-i18n="Reports">
+       Reports
+      </span>
+     </a>
+     <a class="" href="settings.html">
+      <span>
+       ⚙
+      </span>
+      <span data-i18n="Settings">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="side-bottom">
+     <strong>
+      STACKLY workspace
+     </strong>
+     <small>
+      12 team members &middot; 3 teams
+     </small>
+     <button class="logout-btn" id="logoutBtn">
+      <span>
+       &rarrb;
+      </span>
+      <span data-i18n="Logout">
+       Logout
+      </span>
+     </button>
+    </div>
+   </aside>
+   <main class="app-main">
+    <header class="app-topbar">
+     <div style="display:flex;align-items:center;gap:12px">
+      <button aria-label="Toggle sidebar" class="mobile-sidebar-toggle" id="sidebarToggle">
+       ☰
+      </button>
+      <div>
+       <h1 class="top-title">
+        Overview
+       </h1>
+       <div class="breadcrumb">
+        Workspace / Team Members
+       </div>
+      </div>
+     </div>
+     <div class="top-actions">
+      <div class="user-chip" id="userChip">
+       <span class="user-avatar" id="userInitial">
+        U
+       </span>
+       <span>
+        <small>
+         Signed in as
+        </small>
+        <strong id="userName">
+         Workspace User
+        </strong>
+       </span>
+      </div>
+      <input class="workspace-search" data-i18n-placeholder="Search workspace" placeholder="&telrec;  Search workspace"/>
+      <select aria-label="Language" class="lang-select" id="languageSelect">
+       <option value="en">
+        🌐 EN
+       </option>
+       <option value="ta">
+        🌐 தமிழ்
+       </option>
+       <option value="hi">
+        🌐 हिन्दी
+       </option>
+      </select>
+      <div class="notification-wrap">
+       <button class="notification-btn" id="notificationBtn">
+        ♧
+        <span data-i18n="Notifications">
+         Notifications
+        </span>
+        <b id="notificationCount">
+         3
+        </b>
+       </button>
+       <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+         <strong>
+          Notifications
+         </strong>
+         <button id="markAllRead">
+          Mark all as read
+         </button>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           New project created
+          </strong>
+          <small>
+           Website redesign &middot; 8 min ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Task assigned to you
+          </strong>
+          <small>
+           Prepare launch checklist &middot; 1 hour ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Maya completed a task
+          </strong>
+          <small>
+           Client onboarding &middot; 2 hours ago
+          </small>
+         </div>
+        </div>
+        <div class="notice read">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Weekly report generated
+          </strong>
+          <small>
+           Yesterday
+          </small>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <section class="app-content">
+     <div class="page-heading">
+      <div>
+       <h1 data-i18n="Bring your team together">
+        Bring your team together
+       </h1>
+       <p>
+        12 members across 3 teams. Manage roles and keep ownership clear.
+       </p>
+      </div>
+      <button class="btn btn-primary" data-add-demo="Invite member">
+       ＋ Invite Member
+      </button>
+     </div>
+     <div class="toolbar">
+      <select class="form-control" id="teamFilter">
+       <option>
+        All teams
+       </option>
+       <option>
+        Operations
+       </option>
+       <option>
+        Product
+       </option>
+       <option>
+        Marketing
+       </option>
+      </select>
+      <select class="form-control" id="roleFilter">
+       <option>
+        All roles
+       </option>
+       <option>
+        Admin
+       </option>
+       <option>
+        Member
+       </option>
+      </select>
+      <select class="form-control" id="availabilityFilter">
+       <option>
+        All availability
+       </option>
+       <option>
+        Available
+       </option>
+       <option>
+        In a meeting
+       </option>
+       <option>
+        Away
+       </option>
+      </select>
+      <input class="form-control" data-table-search="#teamTable" id="teamSearch" placeholder="Search members..."/>
+     </div>
+     <div class="table-wrap">
+      <table class="data-table" id="teamTable">
+       <thead>
+        <tr>
+         <th>
+          Name
+         </th>
+         <th>
+          Email
+         </th>
+         <th>
+          Team
+         </th>
+         <th>
+          Role
+         </th>
+         <th>
+          Availability
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <b>
+           Alex Morgan
+          </b>
+         </td>
+         <td>
+          alex@stackly.example
+         </td>
+         <td>
+          Operations
+         </td>
+         <td>
+          Admin
+         </td>
+         <td>
+          <span class="status">
+           Available
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Maya Chen
+          </b>
+         </td>
+         <td>
+          maya@stackly.example
+         </td>
+         <td>
+          Product
+         </td>
+         <td>
+          Member
+         </td>
+         <td>
+          <span class="status">
+           Available
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Jordan Lee
+          </b>
+         </td>
+         <td>
+          jordan@stackly.example
+         </td>
+         <td>
+          Operations
+         </td>
+         <td>
+          Member
+         </td>
+         <td>
+          <span class="status pending">
+           In a meeting
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Sam Patel
+          </b>
+         </td>
+         <td>
+          sam@stackly.example
+         </td>
+         <td>
+          Operations
+         </td>
+         <td>
+          Member
+         </td>
+         <td>
+          <span class="status">
+           Available
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Taylor Reed
+          </b>
+         </td>
+         <td>
+          taylor@stackly.example
+         </td>
+         <td>
+          Marketing
+         </td>
+         <td>
+          Member
+         </td>
+         <td>
+          <span class="status">
+           Available
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Riley Davis
+          </b>
+         </td>
+         <td>
+          riley@stackly.example
+         </td>
+         <td>
+          Product
+         </td>
+         <td>
+          Member
+         </td>
+         <td>
+          <span class="status review">
+           Away
+          </span>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <article class="card panel" style="margin-top:18px">
+      <h3 style="font:800 14px Manrope;margin:0 0 8px">
+       Clear access, shared progress
+      </h3>
+      <p class="muted" style="font-size:11px;line-height:1.7">
+       Admins manage workspace settings and invitations. Members collaborate on projects and assigned tasks.
+      </p>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/page-tools.js">
+  </script>
+  <script defer="" src="js/team.js">
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Tasks | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay">
+  </div>
+  <div class="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+     <a href="index.html">
+      <img alt="STACKLY logo" src="assets/stackly-logo.webp"/>
+     </a>
+     <div class="side-quote">
+      Plan Smart. Work Better.
+      <br/>
+      Grow Together.
+     </div>
+    </div>
+    <div class="side-label">
+     WORKSPACE
+    </div>
+    <nav class="side-nav">
+     <a class="" href="overview.html">
+      <span>
+       ▣
+      </span>
+      <span data-i18n="Overview">
+       Overview
+      </span>
+     </a>
+     <a class="" href="analytics.html">
+      <span>
+       ⌁
+      </span>
+      <span data-i18n="Analytics">
+       Analytics
+      </span>
+     </a>
+     <a class="" href="projects.html">
+      <span>
+       ▦
+      </span>
+      <span data-i18n="Projects">
+       Projects
+      </span>
+     </a>
+     <a class="active" href="tasks.html">
+      <span>
+       ☑
+      </span>
+      <span data-i18n="Tasks">
+       Tasks
+      </span>
+     </a>
+     <a class="" href="team.html">
+      <span>
+       ♧
+      </span>
+      <span data-i18n="Team Members">
+       Team Members
+      </span>
+     </a>
+     <a class="" href="reports.html">
+      <span>
+       ▥
+      </span>
+      <span data-i18n="Reports">
+       Reports
+      </span>
+     </a>
+     <a class="" href="settings.html">
+      <span>
+       ⚙
+      </span>
+      <span data-i18n="Settings">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="side-bottom">
+     <strong>
+      STACKLY workspace
+     </strong>
+     <small>
+      12 team members &middot; 3 teams
+     </small>
+     <button class="logout-btn" id="logoutBtn">
+      <span>
+       &rarrb;
+      </span>
+      <span data-i18n="Logout">
+       Logout
+      </span>
+     </button>
+    </div>
+   </aside>
+   <main class="app-main">
+    <header class="app-topbar">
+     <div style="display:flex;align-items:center;gap:12px">
+      <button aria-label="Toggle sidebar" class="mobile-sidebar-toggle" id="sidebarToggle">
+       ☰
+      </button>
+      <div>
+       <h1 class="top-title">
+        Overview
+       </h1>
+       <div class="breadcrumb">
+        Workspace / Tasks
+       </div>
+      </div>
+     </div>
+     <div class="top-actions">
+      <div class="user-chip" id="userChip">
+       <span class="user-avatar" id="userInitial">
+        U
+       </span>
+       <span>
+        <small>
+         Signed in as
+        </small>
+        <strong id="userName">
+         Workspace User
+        </strong>
+       </span>
+      </div>
+      <input class="workspace-search" data-i18n-placeholder="Search workspace" placeholder="&telrec;  Search workspace"/>
+      <select aria-label="Language" class="lang-select" id="languageSelect">
+       <option value="en">
+        🌐 EN
+       </option>
+       <option value="ta">
+        🌐 தமிழ்
+       </option>
+       <option value="hi">
+        🌐 हिन्दी
+       </option>
+      </select>
+      <div class="notification-wrap">
+       <button class="notification-btn" id="notificationBtn">
+        ♧
+        <span data-i18n="Notifications">
+         Notifications
+        </span>
+        <b id="notificationCount">
+         3
+        </b>
+       </button>
+       <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+         <strong>
+          Notifications
+         </strong>
+         <button id="markAllRead">
+          Mark all as read
+         </button>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           New project created
+          </strong>
+          <small>
+           Website redesign &middot; 8 min ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Task assigned to you
+          </strong>
+          <small>
+           Prepare launch checklist &middot; 1 hour ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Maya completed a task
+          </strong>
+          <small>
+           Client onboarding &middot; 2 hours ago
+          </small>
+         </div>
+        </div>
+        <div class="notice read">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Weekly report generated
+          </strong>
+          <small>
+           Yesterday
+          </small>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <section class="app-content">
+     <div class="page-heading">
+      <div>
+       <h1 data-i18n="Make the next step clear">
+        Make the next step clear
+       </h1>
+       <p>
+        48 active tasks &middot; 8 overdue &middot; 18 due this week &middot; 22 upcoming
+       </p>
+      </div>
+      <button class="btn btn-primary" data-add-demo="New task">
+       ＋ New Task
+      </button>
+     </div>
+     <div class="toolbar">
+      <select class="form-control" id="taskViewFilter">
+       <option>
+        Board view
+       </option>
+       <option>
+        List view
+       </option>
+      </select>
+      <select class="form-control" id="taskProjectFilter">
+       <option>
+        All projects
+       </option>
+       <option>
+        Website redesign
+       </option>
+       <option>
+        Client onboarding
+       </option>
+      </select>
+      <select class="form-control" id="taskAssigneeFilter">
+       <option>
+        All assignees
+       </option>
+       <option>
+        Maya Chen
+       </option>
+       <option>
+        Jordan Lee
+       </option>
+      </select>
+      <select class="form-control" id="taskSortFilter">
+       <option>
+        Due date
+       </option>
+       <option>
+        Priority
+       </option>
+      </select>
+     </div>
+     <div class="kanban">
+      <section class="kanban-col">
+       <div class="kanban-head">
+        <span>
+         To do
+        </span>
+        <span>
+         20
+        </span>
+       </div>
+       <article class="task-card">
+        <strong>
+         Prepare launch checklist
+        </strong>
+        <p>
+         Q4 campaign
+        </p>
+        <small>
+         Alex Morgan &middot; Due 14 Nov
+        </small>
+       </article>
+       <article class="task-card">
+        <strong>
+         Collect customer feedback
+        </strong>
+        <p>
+         Client onboarding
+        </p>
+        <small>
+         Jordan Lee &middot; Due 16 Nov
+        </small>
+       </article>
+       <button class="btn btn-light" data-add-demo="To do task" style="width:100%">
+        ＋ Add task
+       </button>
+      </section>
+      <section class="kanban-col">
+       <div class="kanban-head">
+        <span>
+         In progress
+        </span>
+        <span>
+         20
+        </span>
+       </div>
+       <article class="task-card">
+        <strong>
+         Build pricing page
+        </strong>
+        <p>
+         Website redesign
+        </p>
+        <small>
+         Maya Chen &middot; Due 18 Nov
+        </small>
+       </article>
+       <article class="task-card">
+        <strong>
+         Review onboarding flow
+        </strong>
+        <p>
+         Client onboarding
+        </p>
+        <small>
+         Sam Patel &middot; Overdue &middot; 10 Nov
+        </small>
+       </article>
+       <button class="btn btn-light" data-add-demo="In progress task" style="width:100%">
+        ＋ Add task
+       </button>
+      </section>
+      <section class="kanban-col">
+       <div class="kanban-head">
+        <span>
+         In review
+        </span>
+        <span>
+         8
+        </span>
+       </div>
+       <article class="task-card">
+        <strong>
+         Approve page structure
+        </strong>
+        <p>
+         Website redesign
+        </p>
+        <small>
+         Maya Chen &middot; Due 13 Nov
+        </small>
+       </article>
+       <article class="task-card">
+        <strong>
+         Review campaign copy
+        </strong>
+        <p>
+         Q4 campaign
+        </p>
+        <small>
+         Taylor Reed &middot; Due 15 Nov
+        </small>
+       </article>
+       <button class="btn btn-light" data-add-demo="Review task" style="width:100%">
+        ＋ Add task
+       </button>
+      </section>
+     </div>
+     <p class="muted" style="font-size:10px;margin-top:17px">
+      Completed tasks are available in the task archive.
+     </p>
+    </section>
+   </main>
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/page-tools.js">
+  </script>
+  <script defer="" src="js/tasks.js">
+  </script>
+ </body>
+</html>
+

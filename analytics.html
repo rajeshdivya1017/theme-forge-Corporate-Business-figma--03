@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Analytics | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay">
+  </div>
+  <div class="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+     <a href="index.html">
+      <img alt="STACKLY logo" src="assets/stackly-logo.webp"/>
+     </a>
+     <div class="side-quote">
+      Plan Smart. Work Better.
+      <br/>
+      Grow Together.
+     </div>
+    </div>
+    <div class="side-label">
+     WORKSPACE
+    </div>
+    <nav class="side-nav">
+     <a class="" href="overview.html">
+      <span>
+       ▣
+      </span>
+      <span data-i18n="Overview">
+       Overview
+      </span>
+     </a>
+     <a class="active" href="analytics.html">
+      <span>
+       ⌁
+      </span>
+      <span data-i18n="Analytics">
+       Analytics
+      </span>
+     </a>
+     <a class="" href="projects.html">
+      <span>
+       ▦
+      </span>
+      <span data-i18n="Projects">
+       Projects
+      </span>
+     </a>
+     <a class="" href="tasks.html">
+      <span>
+       ☑
+      </span>
+      <span data-i18n="Tasks">
+       Tasks
+      </span>
+     </a>
+     <a class="" href="team.html">
+      <span>
+       ♧
+      </span>
+      <span data-i18n="Team Members">
+       Team Members
+      </span>
+     </a>
+     <a class="" href="reports.html">
+      <span>
+       ▥
+      </span>
+      <span data-i18n="Reports">
+       Reports
+      </span>
+     </a>
+     <a class="" href="settings.html">
+      <span>
+       ⚙
+      </span>
+      <span data-i18n="Settings">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="side-bottom">
+     <strong>
+      STACKLY workspace
+     </strong>
+     <small>
+      12 team members &middot; 3 teams
+     </small>
+     <button class="logout-btn" id="logoutBtn">
+      <span>
+       &rarrb;
+      </span>
+      <span data-i18n="Logout">
+       Logout
+      </span>
+     </button>
+    </div>
+   </aside>
+   <main class="app-main">
+    <header class="app-topbar">
+     <div style="display:flex;align-items:center;gap:12px">
+      <button aria-label="Toggle sidebar" class="mobile-sidebar-toggle" id="sidebarToggle">
+       ☰
+      </button>
+      <div>
+       <h1 class="top-title">
+        Overview
+       </h1>
+       <div class="breadcrumb">
+        Workspace / Analytics
+       </div>
+      </div>
+     </div>
+     <div class="top-actions">
+      <div class="user-chip" id="userChip">
+       <span class="user-avatar" id="userInitial">
+        U
+       </span>
+       <span>
+        <small>
+         Signed in as
+        </small>
+        <strong id="userName">
+         Workspace User
+        </strong>
+       </span>
+      </div>
+      <input class="workspace-search" data-i18n-placeholder="Search workspace" placeholder="&telrec;  Search workspace"/>
+      <select aria-label="Language" class="lang-select" id="languageSelect">
+       <option value="en">
+        🌐 EN
+       </option>
+       <option value="ta">
+        🌐 தமிழ்
+       </option>
+       <option value="hi">
+        🌐 हिन्दी
+       </option>
+      </select>
+      <div class="notification-wrap">
+       <button class="notification-btn" id="notificationBtn">
+        ♧
+        <span data-i18n="Notifications">
+         Notifications
+        </span>
+        <b id="notificationCount">
+         3
+        </b>
+       </button>
+       <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+         <strong>
+          Notifications
+         </strong>
+         <button id="markAllRead">
+          Mark all as read
+         </button>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           New project created
+          </strong>
+          <small>
+           Website redesign &middot; 8 min ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Task assigned to you
+          </strong>
+          <small>
+           Prepare launch checklist &middot; 1 hour ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Maya completed a task
+          </strong>
+          <small>
+           Client onboarding &middot; 2 hours ago
+          </small>
+         </div>
+        </div>
+        <div class="notice read">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Weekly report generated
+          </strong>
+          <small>
+           Yesterday
+          </small>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <section class="app-content">
+     <div class="page-heading">
+      <div>
+       <h1 data-i18n="Understand your team&rsquo;s performance">
+        Understand your team&rsquo;s performance
+       </h1>
+       <p>
+        Turn workspace activity into clear, useful insights.
+       </p>
+      </div>
+      <button class="btn btn-primary">
+       &darr; Export report
+      </button>
+     </div>
+     <div class="toolbar">
+      <select class="form-control" id="analyticsPeriod">
+       <option>
+        November 2026
+       </option>
+       <option>
+        October 2026
+       </option>
+       <option>
+        September 2026
+       </option>
+       <option>
+        August 2026
+       </option>
+       <option>
+        July 2026
+       </option>
+       <option>
+        June 2026
+       </option>
+       <option>
+        May 2026
+       </option>
+       <option>
+        Last 30 days
+       </option>
+       <option>
+        This year
+       </option>
+      </select>
+      <select class="form-control" id="analyticsTeam">
+       <option>
+        All teams
+       </option>
+       <option>
+        Operations
+       </option>
+       <option>
+        Product
+       </option>
+       <option>
+        Marketing
+       </option>
+      </select>
+      <button class="btn btn-light">
+       &orarr; Refresh data
+      </button>
+     </div>
+     <div class="kpi-grid">
+      <article class="card kpi">
+       <div class="kpi-label">
+        Tasks completed
+       </div>
+       <div class="kpi-value">
+        236
+       </div>
+       <div class="kpi-foot">
+        &uarr; 16.8% vs previous period
+       </div>
+      </article>
+      <article class="card kpi">
+       <div class="kpi-label">
+        Average completion
+       </div>
+       <div class="kpi-value">
+        4.6d
+       </div>
+       <div class="kpi-foot">
+        &darr; 0.8 days faster
+       </div>
+      </article>
+      <article class="card kpi">
+       <div class="kpi-label">
+        Active projects
+       </div>
+       <div class="kpi-value">
+        24
+       </div>
+       <div class="kpi-foot">
+        12 currently in progress
+       </div>
+      </article>
+      <article class="card kpi">
+       <div class="kpi-label">
+        Team efficiency
+       </div>
+       <div class="kpi-value">
+        91%
+       </div>
+       <div class="kpi-foot">
+        &uarr; 5.2% this quarter
+       </div>
+      </article>
+     </div>
+     <div class="dashboard-grid">
+      <article class="card panel">
+       <div class="panel-head">
+        <h3>
+         Business performance
+        </h3>
+        <span>
+         Tasks completed per month &middot; May&ndash;Oct 2026
+        </span>
+       </div>
+       <div class="bar-chart">
+        <div class="bar-col">
+         <b>
+          24
+         </b>
+         <div class="bar" style="height:31.200000000000003%">
+         </div>
+         <small>
+          May
+         </small>
+        </div>
+        <div class="bar-col">
+         <b>
+          32
+         </b>
+         <div class="bar" style="height:41.6%">
+         </div>
+         <small>
+          Jun
+         </small>
+        </div>
+        <div class="bar-col">
+         <b>
+          28
+         </b>
+         <div class="bar" style="height:36.4%">
+         </div>
+         <small>
+          Jul
+         </small>
+        </div>
+        <div class="bar-col">
+         <b>
+          40
+         </b>
+         <div class="bar" style="height:52.0%">
+         </div>
+         <small>
+          Aug
+         </small>
+        </div>
+        <div class="bar-col">
+         <b>
+          46
+         </b>
+         <div class="bar" style="height:59.800000000000004%">
+         </div>
+         <small>
+          Sep
+         </small>
+        </div>
+        <div class="bar-col">
+         <b>
+          56
+         </b>
+         <div class="bar" style="height:72.8%">
+         </div>
+         <small>
+          Oct
+         </small>
+        </div>
+       </div>
+       <p class="muted" style="font-size:10px">
+        Counts reflect the current sample period.
+       </p>
+      </article>
+      <article class="card panel">
+       <div class="panel-head">
+        <h3>
+         Project distribution
+        </h3>
+        <span>
+         24 total projects
+        </span>
+       </div>
+       <div class="progress-row">
+        <div class="progress-meta">
+         <span>
+          Active
+         </span>
+         <b>
+          12
+         </b>
+        </div>
+        <div class="progress-track">
+         <span style="width:50%">
+         </span>
+        </div>
+       </div>
+       <div class="progress-row">
+        <div class="progress-meta">
+         <span>
+          Planned
+         </span>
+         <b>
+          4
+         </b>
+        </div>
+        <div class="progress-track">
+         <span style="width:17%">
+         </span>
+        </div>
+       </div>
+       <div class="progress-row">
+        <div class="progress-meta">
+         <span>
+          Completed
+         </span>
+         <b>
+          8
+         </b>
+        </div>
+        <div class="progress-track">
+         <span style="width:33%">
+         </span>
+        </div>
+       </div>
+      </article>
+     </div>
+     <article class="card panel">
+      <div class="panel-head">
+       <h3>
+        Performance summary
+       </h3>
+       <span class="pill">
+        Healthy trend
+       </span>
+      </div>
+      <p style="font-size:12px;line-height:1.8">
+       Completed tasks increased from 46 in September to 56 in October. Review overdue work to keep the next month on track. Your team is maintaining a strong delivery rhythm across active projects.
+      </p>
+      <small class="muted">
+       Example workspace data &middot; Counts reflect the current sample period.
+      </small>
+     </article>
+    </section>
+   </main>
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/charts.js">
+  </script>
+  <script defer="" src="js/page-tools.js">
+  </script>
+  <script defer="" src="js/analytics.js">
+  </script>
+ </body>
+</html>
+

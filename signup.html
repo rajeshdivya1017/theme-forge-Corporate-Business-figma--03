@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Sign up | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+  <link href="css/site.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <!-- =========================================
+         STACKLY PRELOADER
+    ========================================== -->
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <!-- =========================================
+         SIGNUP PAGE
+    ========================================== -->
+  <div class="auth-page">
+   <!-- AUTH HEADER -->
+   <header class="auth-header">
+    <a href="index.html">
+     <img alt="STACKLY" src="assets/stackly-logo.webp"/>
+    </a>
+    <div class="auth-header-actions">
+     <a href="index.html">
+      &larr; Back to Workspace
+     </a>
+     <select aria-label="Language" class="lang-select" id="languageSelect">
+      <option value="en">
+       🌐 English (US)
+      </option>
+      <option value="ta">
+       🌐 தமிழ்
+      </option>
+      <option value="hi">
+       🌐 हिन्दी
+      </option>
+     </select>
+    </div>
+   </header>
+   <!-- =========================================
+             MAIN SIGNUP CONTENT
+        ========================================== -->
+   <main class="auth-main">
+    <!-- LEFT PROMOTIONAL SECTION -->
+    <section class="auth-promo">
+     <span class="eyebrow">
+      ONE CLEAR WORKSPACE
+     </span>
+     <h1>
+      Less busywork.
+      <br/>
+      More progress.
+     </h1>
+     <p>
+      Bring your projects, tasks, and team together.
+                    Keep the next step in view.
+     </p>
+     <small>
+      Projects　/　People　/　Performance
+     </small>
+     <!-- PROMOTIONAL IMAGE SLIDESHOW -->
+     <div aria-label="STACKLY workspace gallery" class="auth-promo-slides">
+      <img alt="Modern office workspace" class="auth-promo-slide active" src="assets/corporate images/hero image 01.webp"/>
+      <img alt="Team collaboration" class="auth-promo-slide" src="assets/corporate images/business analytics 02.webp"/>
+      <img alt="Business team meeting" class="auth-promo-slide" src="assets/corporate images/team collaburation 01.webp"/>
+     </div>
+    </section>
+    <!-- RIGHT SIGNUP FORM -->
+    <form class="auth-form" id="signupForm">
+     <h2 data-i18n="Create your account">
+      Create your account
+     </h2>
+     <p>
+      Start organizing your business with STACKLY.
+     </p>
+     <!-- FULL NAME -->
+     <div class="field">
+      <label data-i18n="Full name">
+       Full name
+      </label>
+      <input autocomplete="name" class="form-control" id="signupName" name="name" placeholder="Alex Morgan" required=""/>
+     </div>
+     <!-- EMAIL ADDRESS -->
+     <div class="field">
+      <label data-i18n="Email address">
+       Email address
+      </label>
+      <input autocomplete="email" class="form-control" id="signupEmail" name="email" placeholder="you@company.com" required="" type="email"/>
+     </div>
+     <!-- PASSWORD -->
+     <div class="field">
+      <label data-i18n="Password">
+       Password
+      </label>
+      <input autocomplete="new-password" class="form-control" id="signupPassword" minlength="8" name="password" placeholder="At least 8 characters" required="" type="password"/>
+     </div>
+     <!-- CONFIRM PASSWORD -->
+     <div class="field">
+      <label data-i18n="Confirm password">
+       Confirm password
+      </label>
+      <input autocomplete="new-password" class="form-control" id="signupConfirm" minlength="8" name="confirmPassword" placeholder="Re-enter your password" required="" type="password"/>
+     </div>
+     <!-- TERMS AND PRIVACY -->
+     <label class="checkbox-row">
+      <input required="" type="checkbox"/>
+      I agree to the Terms and Privacy Policy.
+     </label>
+     <!-- FORM ALERT -->
+     <div class="auth-alert">
+     </div>
+     <!-- CREATE ACCOUNT BUTTON -->
+     <button class="btn btn-primary" data-i18n="Create Account" type="submit">
+      Create Account
+     </button>
+     <!-- LOGIN LINK -->
+     <div class="auth-switch">
+      Already have an account?
+      <a href="login.html">
+       Login
+      </a>
+     </div>
+    </form>
+   </main>
+   <!-- =========================================
+             AUTH FOOTER
+        ========================================== -->
+   <footer class="auth-foot">
+    &copy; 2026 STACKLY　&middot;　Privacy　&middot;　Terms　&middot;
+    <a href="index.html">
+     Contact
+    </a>
+   </footer>
+  </div>
+  <!-- =========================================
+         JAVASCRIPT FILES
+    ========================================== -->
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/landing.js">
+  </script>
+  <script defer="" src="js/signup.js">
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Projects | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay">
+  </div>
+  <div class="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+     <a href="index.html">
+      <img alt="STACKLY logo" src="assets/stackly-logo.webp"/>
+     </a>
+     <div class="side-quote">
+      Plan Smart. Work Better.
+      <br/>
+      Grow Together.
+     </div>
+    </div>
+    <div class="side-label">
+     WORKSPACE
+    </div>
+    <nav class="side-nav">
+     <a class="" href="overview.html">
+      <span>
+       ▣
+      </span>
+      <span data-i18n="Overview">
+       Overview
+      </span>
+     </a>
+     <a class="" href="analytics.html">
+      <span>
+       ⌁
+      </span>
+      <span data-i18n="Analytics">
+       Analytics
+      </span>
+     </a>
+     <a class="active" href="projects.html">
+      <span>
+       ▦
+      </span>
+      <span data-i18n="Projects">
+       Projects
+      </span>
+     </a>
+     <a class="" href="tasks.html">
+      <span>
+       ☑
+      </span>
+      <span data-i18n="Tasks">
+       Tasks
+      </span>
+     </a>
+     <a class="" href="team.html">
+      <span>
+       ♧
+      </span>
+      <span data-i18n="Team Members">
+       Team Members
+      </span>
+     </a>
+     <a class="" href="reports.html">
+      <span>
+       ▥
+      </span>
+      <span data-i18n="Reports">
+       Reports
+      </span>
+     </a>
+     <a class="" href="settings.html">
+      <span>
+       ⚙
+      </span>
+      <span data-i18n="Settings">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="side-bottom">
+     <strong>
+      STACKLY workspace
+     </strong>
+     <small>
+      12 team members &middot; 3 teams
+     </small>
+     <button class="logout-btn" id="logoutBtn">
+      <span>
+       &rarrb;
+      </span>
+      <span data-i18n="Logout">
+       Logout
+      </span>
+     </button>
+    </div>
+   </aside>
+   <main class="app-main">
+    <header class="app-topbar">
+     <div style="display:flex;align-items:center;gap:12px">
+      <button aria-label="Toggle sidebar" class="mobile-sidebar-toggle" id="sidebarToggle">
+       ☰
+      </button>
+      <div>
+       <h1 class="top-title">
+        Overview
+       </h1>
+       <div class="breadcrumb">
+        Workspace / Projects
+       </div>
+      </div>
+     </div>
+     <div class="top-actions">
+      <div class="user-chip" id="userChip">
+       <span class="user-avatar" id="userInitial">
+        U
+       </span>
+       <span>
+        <small>
+         Signed in as
+        </small>
+        <strong id="userName">
+         Workspace User
+        </strong>
+       </span>
+      </div>
+      <input class="workspace-search" data-i18n-placeholder="Search workspace" placeholder="&telrec;  Search workspace"/>
+      <select aria-label="Language" class="lang-select" id="languageSelect">
+       <option value="en">
+        🌐 EN
+       </option>
+       <option value="ta">
+        🌐 தமிழ்
+       </option>
+       <option value="hi">
+        🌐 हिन्दी
+       </option>
+      </select>
+      <div class="notification-wrap">
+       <button class="notification-btn" id="notificationBtn">
+        ♧
+        <span data-i18n="Notifications">
+         Notifications
+        </span>
+        <b id="notificationCount">
+         3
+        </b>
+       </button>
+       <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+         <strong>
+          Notifications
+         </strong>
+         <button id="markAllRead">
+          Mark all as read
+         </button>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           New project created
+          </strong>
+          <small>
+           Website redesign &middot; 8 min ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Task assigned to you
+          </strong>
+          <small>
+           Prepare launch checklist &middot; 1 hour ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Maya completed a task
+          </strong>
+          <small>
+           Client onboarding &middot; 2 hours ago
+          </small>
+         </div>
+        </div>
+        <div class="notice read">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Weekly report generated
+          </strong>
+          <small>
+           Yesterday
+          </small>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <section class="app-content">
+     <div class="page-heading">
+      <div>
+       <h1 data-i18n="Keep every project on track">
+        Keep every project on track
+       </h1>
+       <p>
+        Organize priorities, owners, and progress across your business.
+       </p>
+      </div>
+      <button class="btn btn-primary" data-add-demo="New project">
+       ＋ New Project
+      </button>
+     </div>
+     <div class="kpi-grid">
+      <article class="card kpi">
+       <div class="kpi-label">
+        All projects
+       </div>
+       <div class="kpi-value">
+        24
+       </div>
+       <div class="kpi-foot">
+        Across 3 teams
+       </div>
+      </article>
+      <article class="card kpi">
+       <div class="kpi-label">
+        Active
+       </div>
+       <div class="kpi-value">
+        12
+       </div>
+       <div class="kpi-foot">
+        50% of all projects
+       </div>
+      </article>
+      <article class="card kpi">
+       <div class="kpi-label">
+        Completed
+       </div>
+       <div class="kpi-value">
+        8
+       </div>
+       <div class="kpi-foot">
+        &uarr; 2 this month
+       </div>
+      </article>
+      <article class="card kpi">
+       <div class="kpi-label">
+        At risk
+       </div>
+       <div class="kpi-value">
+        2
+       </div>
+       <div class="kpi-foot" style="color:#b87517">
+        Needs attention
+       </div>
+      </article>
+     </div>
+     <div class="toolbar">
+      <select class="form-control" id="projectStatusFilter">
+       <option>
+        All projects
+       </option>
+       <option>
+        Active
+       </option>
+       <option>
+        Completed
+       </option>
+       <option>
+        Planned
+       </option>
+       <option>
+        In review
+       </option>
+       <option>
+        At risk
+       </option>
+      </select>
+      <select class="form-control" id="projectOwnerFilter">
+       <option>
+        All owners
+       </option>
+       <option>
+        Maya Chen
+       </option>
+       <option>
+        Jordan Lee
+       </option>
+      </select>
+      <input class="form-control" data-table-search="#projectsTable" id="projectSearch" placeholder="Search projects..."/>
+     </div>
+     <div class="table-wrap">
+      <table class="data-table" id="projectsTable">
+       <thead>
+        <tr>
+         <th>
+          Project
+         </th>
+         <th>
+          Owner
+         </th>
+         <th>
+          Status
+         </th>
+         <th>
+          Progress
+         </th>
+         <th>
+          Due date
+         </th>
+         <th>
+          Priority
+         </th>
+        </tr>
+       </thead>
+       <tbody>
+        <tr>
+         <td>
+          <b>
+           Website redesign
+          </b>
+         </td>
+         <td>
+          Maya Chen
+         </td>
+         <td>
+          <span class="status">
+           Active
+          </span>
+         </td>
+         <td>
+          72%
+         </td>
+         <td>
+          20 Nov 2026
+         </td>
+         <td>
+          High
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Client onboarding
+          </b>
+         </td>
+         <td>
+          Jordan Lee
+         </td>
+         <td>
+          <span class="status">
+           Active
+          </span>
+         </td>
+         <td>
+          45%
+         </td>
+         <td>
+          27 Nov 2026
+         </td>
+         <td>
+          Medium
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Q4 campaign
+          </b>
+         </td>
+         <td>
+          Alex Morgan
+         </td>
+         <td>
+          <span class="status pending">
+           Planned
+          </span>
+         </td>
+         <td>
+          30%
+         </td>
+         <td>
+          30 Nov 2026
+         </td>
+         <td>
+          High
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Operations review
+          </b>
+         </td>
+         <td>
+          Sam Patel
+         </td>
+         <td>
+          <span class="status">
+           Completed
+          </span>
+         </td>
+         <td>
+          100%
+         </td>
+         <td>
+          31 Oct 2026
+         </td>
+         <td>
+          Low
+         </td>
+        </tr>
+        <tr>
+         <td>
+          <b>
+           Customer portal
+          </b>
+         </td>
+         <td>
+          Riley Davis
+         </td>
+         <td>
+          <span class="status review">
+           In review
+          </span>
+         </td>
+         <td>
+          86%
+         </td>
+         <td>
+          05 Dec 2026
+         </td>
+         <td>
+          Medium
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <p class="muted" style="font-size:10px;margin-top:12px">
+      Showing 5 recent projects of 24　&middot;　Previous　1　2　&hellip;　6　Next
+     </p>
+    </section>
+   </main>
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/page-tools.js">
+  </script>
+  <script defer="" src="js/projects.js">
+  </script>
+ </body>
+</html>
+

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <meta content="#071832" name="theme-color"/>
+  <meta content="STACKLY business workspace for projects, people and performance" name="description"/>
+  <title>
+   Settings | STACKLY
+  </title>
+  <link href="css/common.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div aria-label="Loading STACKLY" id="preloader">
+   <div class="loader-wrap">
+    <img alt="STACKLY" class="loader-brand" src="assets/stackly-logo.webp"/>
+    <div class="laptop-scene">
+     <div class="laptop">
+      <div class="screen">
+       <div class="screen-top">
+        <i>
+        </i>
+        <i>
+        </i>
+        <i>
+        </i>
+       </div>
+       <div class="dash">
+        <div>
+         <div class="dash-kpis">
+          <b>
+          </b>
+          <b>
+          </b>
+          <b>
+          </b>
+         </div>
+         <div class="dash-chart">
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+          <i>
+          </i>
+         </div>
+        </div>
+        <div class="dash-side">
+        </div>
+       </div>
+      </div>
+      <div class="base">
+      </div>
+     </div>
+    </div>
+    <div class="loader-caption">
+     WORKSPACE IS GETTING READY
+    </div>
+    <div class="loader-progress">
+     <span id="loaderBar">
+     </span>
+    </div>
+    <div class="loader-percent" id="loaderPercent">
+     0%
+    </div>
+    <div class="loader-note">
+     Projects &middot; People &middot; Performance
+    </div>
+   </div>
+  </div>
+  <div class="side-overlay" id="sideOverlay">
+  </div>
+  <div class="app-shell">
+   <aside class="sidebar" id="sidebar">
+    <div class="side-brand">
+     <a href="index.html">
+      <img alt="STACKLY logo" src="assets/stackly-logo.webp"/>
+     </a>
+     <div class="side-quote">
+      Plan Smart. Work Better.
+      <br/>
+      Grow Together.
+     </div>
+    </div>
+    <div class="side-label">
+     WORKSPACE
+    </div>
+    <nav class="side-nav">
+     <a class="" href="overview.html">
+      <span>
+       ▣
+      </span>
+      <span data-i18n="Overview">
+       Overview
+      </span>
+     </a>
+     <a class="" href="analytics.html">
+      <span>
+       ⌁
+      </span>
+      <span data-i18n="Analytics">
+       Analytics
+      </span>
+     </a>
+     <a class="" href="projects.html">
+      <span>
+       ▦
+      </span>
+      <span data-i18n="Projects">
+       Projects
+      </span>
+     </a>
+     <a class="" href="tasks.html">
+      <span>
+       ☑
+      </span>
+      <span data-i18n="Tasks">
+       Tasks
+      </span>
+     </a>
+     <a class="" href="team.html">
+      <span>
+       ♧
+      </span>
+      <span data-i18n="Team Members">
+       Team Members
+      </span>
+     </a>
+     <a class="" href="reports.html">
+      <span>
+       ▥
+      </span>
+      <span data-i18n="Reports">
+       Reports
+      </span>
+     </a>
+     <a class="active" href="settings.html">
+      <span>
+       ⚙
+      </span>
+      <span data-i18n="Settings">
+       Settings
+      </span>
+     </a>
+    </nav>
+    <div class="side-bottom">
+     <strong>
+      STACKLY workspace
+     </strong>
+     <small>
+      12 team members &middot; 3 teams
+     </small>
+     <button class="logout-btn" id="logoutBtn">
+      <span>
+       &rarrb;
+      </span>
+      <span data-i18n="Logout">
+       Logout
+      </span>
+     </button>
+    </div>
+   </aside>
+   <main class="app-main">
+    <header class="app-topbar">
+     <div style="display:flex;align-items:center;gap:12px">
+      <button aria-label="Toggle sidebar" class="mobile-sidebar-toggle" id="sidebarToggle">
+       ☰
+      </button>
+      <div>
+       <h1 class="top-title">
+        Overview
+       </h1>
+       <div class="breadcrumb">
+        Workspace / Settings
+       </div>
+      </div>
+     </div>
+     <div class="top-actions">
+      <div class="user-chip" id="userChip">
+       <span class="user-avatar" id="userInitial">
+        U
+       </span>
+       <span>
+        <small>
+         Signed in as
+        </small>
+        <strong id="userName">
+         Workspace User
+        </strong>
+       </span>
+      </div>
+      <input class="workspace-search" data-i18n-placeholder="Search workspace" placeholder="&telrec;  Search workspace"/>
+      <select aria-label="Language" class="lang-select" id="languageSelect">
+       <option value="en">
+        🌐 EN
+       </option>
+       <option value="ta">
+        🌐 தமிழ்
+       </option>
+       <option value="hi">
+        🌐 हिन्दी
+       </option>
+      </select>
+      <div class="notification-wrap">
+       <button class="notification-btn" id="notificationBtn">
+        ♧
+        <span data-i18n="Notifications">
+         Notifications
+        </span>
+        <b id="notificationCount">
+         3
+        </b>
+       </button>
+       <div class="notification-panel" id="notificationPanel">
+        <div class="notification-head">
+         <strong>
+          Notifications
+         </strong>
+         <button id="markAllRead">
+          Mark all as read
+         </button>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           New project created
+          </strong>
+          <small>
+           Website redesign &middot; 8 min ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Task assigned to you
+          </strong>
+          <small>
+           Prepare launch checklist &middot; 1 hour ago
+          </small>
+         </div>
+        </div>
+        <div class="notice">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Maya completed a task
+          </strong>
+          <small>
+           Client onboarding &middot; 2 hours ago
+          </small>
+         </div>
+        </div>
+        <div class="notice read">
+         <span class="notice-dot">
+         </span>
+         <div>
+          <strong>
+           Weekly report generated
+          </strong>
+          <small>
+           Yesterday
+          </small>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </header>
+    <section class="app-content">
+     <div class="page-heading">
+      <div>
+       <h1 data-i18n="Workspace settings">
+        Workspace settings
+       </h1>
+       <p>
+        Manage your profile, business details, and notification preferences.
+       </p>
+      </div>
+     </div>
+     <div class="tabs">
+      <button class="active" data-i18n="General" data-tab="general">
+       General
+      </button>
+      <button data-tab="security">
+       Security
+      </button>
+      <button data-tab="notifications">
+       Notifications
+      </button>
+     </div>
+     <div class="settings-grid">
+      <article class="card settings-card" data-tab-panel="general">
+       <h3 data-i18n="Profile &amp; business details" style="font:800 14px Manrope;margin:0 0 18px">
+        Profile &amp; business details
+       </h3>
+       <div class="field">
+        <label>
+         Full name
+        </label>
+        <input class="form-control" id="businessProfileName" value="Alex Morgan"/>
+       </div>
+       <div class="field">
+        <label>
+         Email address
+        </label>
+        <input class="form-control" id="businessProfileEmail" type="email" value="alex@stackly.example"/>
+       </div>
+       <div class="field">
+        <label>
+         Company name
+        </label>
+        <input class="form-control" id="businessCompanyName" value="STACKLY"/>
+       </div>
+       <div class="field">
+        <label>
+         Time zone
+        </label>
+        <select class="form-control">
+         <option>
+          UTC +05:30 &middot; India Standard Time
+         </option>
+         <option>
+          UTC +00:00
+         </option>
+         <option>
+          UTC -05:00
+         </option>
+        </select>
+       </div>
+       <h4 style="font-size:12px">
+        Notifications
+       </h4>
+       <label class="checkbox-row">
+        <input checked="" type="checkbox"/>
+        Email me about assigned tasks
+       </label>
+       <label class="checkbox-row">
+        <input checked="" type="checkbox"/>
+        Send a weekly workspace summary
+       </label>
+       <button class="btn btn-primary" data-i18n="Save Changes" id="saveSettings">
+        Save Changes
+       </button>
+       <button class="btn btn-light" type="reset">
+        Cancel
+       </button>
+       <p hidden="" id="settingsSaved" style="font-size:11px;color:#168456">
+        &checkmark; Your settings have been saved.
+       </p>
+      </article>
+      <article class="card settings-card">
+       <h3 style="font:800 14px Manrope;margin:0 0 15px">
+        Your workspace
+       </h3>
+       <p style="font-size:12px;line-height:1.7">
+        STACKLY
+        <br/>
+        12 members &middot; 3 teams
+       </p>
+       <p class="muted" style="font-size:11px;line-height:1.7">
+        Only workspace admins can change company details.
+       </p>
+       <hr style="border:0;border-top:1px solid var(--line);margin:18px 0"/>
+       <strong style="font-size:11px">
+        Need help?
+       </strong>
+       <p class="muted" style="font-size:11px">
+        support@stackly.example
+       </p>
+      </article>
+      <article class="card settings-card" data-tab-panel="security" hidden="">
+       <h3 style="font:800 14px Manrope">
+        Security preferences
+       </h3>
+       <label class="checkbox-row">
+        <input checked="" type="checkbox"/>
+        Require two-step verification
+       </label>
+       <label class="checkbox-row">
+        <input checked="" type="checkbox"/>
+        Sign out after 30 minutes of inactivity
+       </label>
+       <button class="btn btn-primary" data-add-demo="Update password">
+        Update password
+       </button>
+      </article>
+      <article class="card settings-card" data-tab-panel="notifications" hidden="">
+       <h3 style="font:800 14px Manrope">
+        Notification preferences
+       </h3>
+       <label class="checkbox-row">
+        <input checked="" type="checkbox"/>
+        Project updates
+       </label>
+       <label class="checkbox-row">
+        <input checked="" type="checkbox"/>
+        Task assignments
+       </label>
+       <label class="checkbox-row">
+        <input type="checkbox"/>
+        Product announcements
+       </label>
+       <button class="btn btn-primary" id="saveNotificationSettings">
+        Save Changes
+       </button>
+      </article>
+     </div>
+     <section class="card settings-card" style="margin-top:18px">
+      <h3>
+       My account details
+      </h3>
+      <form id="profileSettingsForm">
+       <div class="field">
+        <label for="profileName">
+         Full name
+        </label>
+        <input class="form-control" id="profileName" required=""/>
+       </div>
+       <div class="field">
+        <label for="profileEmail">
+         Email address
+        </label>
+        <input class="form-control" id="profileEmail" required="" type="email"/>
+       </div>
+       <button class="btn btn-primary" type="submit">
+        Save profile
+       </button>
+      </form>
+     </section>
+    </section>
+   </main>
+  </div>
+  <script defer="" src="js/common.js">
+  </script>
+  <script defer="" src="js/page-tools.js">
+  </script>
+  <script defer="" src="js/settings.js">
+  </script>
+ </body>
+</html>
+
